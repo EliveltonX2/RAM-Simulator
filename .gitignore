@@ -1,0 +1,28 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+ENV/local/
+
+# PyInstaller build files
+build/
+*.spec
+
+# PyInstaller distribution folder
+# Geralmente não enviamos arquivos binários grandes (.exe) para o repositório git.
+# Em vez disso, disponibilize-os via GitHub Releases.
+# Se você realmente quiser enviar o executável no commit do repositório, comente a linha abaixo:
+dist/
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db

@@ -1,0 +1,18 @@
+# Arquivo de Teste - Simulador de Alocação de Memória Dinâmica
+# -----------------------------------------------------------------
+# Primeira linha útil representa a memória física total (bytes)
+1000
+
+# Eventos:
+# Alocação: A <ID_Processo> <Tamanho_Bytes>
+# Liberação: D <ID_Processo> ou L <ID_Processo>
+
+A P1 150
+A P2 300
+A P3 200
+D P2
+A P4 350
+A P5 100
+D P1
+A P6 200
+A P7 100

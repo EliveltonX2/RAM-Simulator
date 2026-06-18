@@ -1,0 +1,30 @@
+# Caso de Teste Acadêmico - Simulador de Alocação de Memória
+# -------------------------------------------------------------
+# Linha 1: Tamanho total da RAM (1024 bytes)
+1024
+
+# Sequência de eventos para testar:
+# 1. Alocações iniciais
+A P1 200
+A P2 300
+A P3 150
+A P4 250
+
+# 2. Desaloca P2 para abrir um buraco de 300 bytes no meio
+D P2
+
+# 3. Tenta alocar P5 de 100 bytes (vai testar o posicionamento nas brechas)
+A P5 100
+
+# 4. Desaloca P4 para abrir outro buraco no final
+D P4
+
+# 5. Tenta alocar P6 (tamanho 350).
+#    Nesse ponto, as brechas livres são de 200 bytes (onde P5 foi alocado e sobrou) e outra de 250 bytes.
+#    Total livre = 474 bytes, mas nenhuma brecha contígua é >= 350 bytes.
+#    Isso causará FRAGMENTAÇÃO EXTERNA!
+A P6 350
+
+# 6. Desaloca P1 e P3 para testar a coalescência (fusão) nas pontas
+D P1
+D P3
